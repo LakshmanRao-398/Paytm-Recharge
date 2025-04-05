@@ -1,3 +1,4 @@
+pipeline{
 stages {
     stage('Checkout from GitHub') {
         steps {
@@ -18,4 +19,4 @@ stages {
         }
     }
 }
-
+}
