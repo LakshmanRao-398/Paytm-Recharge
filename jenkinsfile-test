@@ -16,6 +16,7 @@ pipeline {
                 // Add your build steps here **/
                  bat """
                         powershell -Command "(Get-Content abc.xml) -replace 'lakshman', 'mahesh' | Set-Content abc.xml"
+                        powershell -Command "Get-Content abc.xml"
                         """
             }
         }
