@@ -10,12 +10,12 @@ pipeline {
 
         stage('Build') {
             steps {
-                  def filePath = 'abc.xml'
+                 
         /**        echo 'Running build...'
              //    sh "sed -i 's/lakshman/mahesh/g' abc.xml
                 // Add your build steps here **/
                  bat """
-                        powershell -Command "(Get-Content ${filePath}) -replace 'lakshman', 'mahesh' | Set-Content ${filePath}"
+                        powershell -Command "(Get-Content abc.xml) -replace 'lakshman', 'mahesh' | Set-Content abc.xml"
                         """
             }
         }
