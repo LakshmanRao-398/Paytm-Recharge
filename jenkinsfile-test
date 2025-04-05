@@ -4,13 +4,14 @@ pipeline {
     stages {
         stage('Checkout from GitHub') {
             steps {
-                git url: 'https://github.com/LakshmanRao-398/testing.git', branch: 'test'
+                git url: 'https://github.com/LakshmanRao-398/testing.git', branch: 'main'
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Running build...'
+                 sh "sed -i 's/lakshman/mahesh/g' abc.xml
                 // Add your build steps here
             }
         }
