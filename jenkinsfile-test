@@ -10,9 +10,12 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Running build...'
-                 sh "sed -i 's/lakshman/mahesh/g' abc.xml
-                // Add your build steps here
+        /**        echo 'Running build...'
+             //    sh "sed -i 's/lakshman/mahesh/g' abc.xml
+                // Add your build steps here **/
+                 bat """
+                        powershell -Command "(Get-Content ${filePath}) -replace 'lakshman', 'mahesh' | Set-Content ${filePath}"
+                        """
             }
         }
 
