@@ -10,6 +10,7 @@ pipeline {
 
         stage('Build') {
             steps {
+                   def filePath = abc.xml
         /**        echo 'Running build...'
              //    sh "sed -i 's/lakshman/mahesh/g' abc.xml
                 // Add your build steps here **/
